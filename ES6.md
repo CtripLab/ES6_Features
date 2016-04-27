@@ -1,11 +1,17 @@
 #ES6 New Features
 
 ##Introduction
-ECMAScript 6，又被称作ECMAScript 2015，是ECMAScript最新标准。
+ECMAScript 6，又被称作ECMAScript 2015，是ECMAScript最新标准，已经在2015年6月正式发布了。
 
-所有的ES6特性。[Click Here](http://kangax.github.io/es5-compat-table/es6/)
+它的目标，是使得JavaScript语言可以用来编写复杂的大型应用程序，成为企业级开发语言
 
-支持这些特性的javascript引擎。[Click Here](http://kangax.github.io/es5-compat-table/es6/)
+在nodejs中可以使用大多数的ES6特性，只需要在启动应用的时候加上--harmony即可
+```shell
+node yourapp.js --harmony
+```
+
+ES6特性的支持情况。[Click Here](http://kangax.github.io/es5-compat-table/es6/)
+
 ##Features
 
 - Block-Scoped Constructs Let and Const（块级作用域）
