@@ -3,12 +3,13 @@
 ##Introduction
 ECMAScript 6，又被称作ECMAScript 2015，是ECMAScript最新标准，已经在2015年6月正式发布了。
 
-它的目标，是使得JavaScript语言可以用来编写复杂的大型应用程序，成为企业级开发语言
+它的目标，是使得JavaScript语言可以用来编写复杂的大型应用程序，成为企业级开发语言。
 
-在nodejs中可以使用大多数的ES6特性，只需要在启动应用的时候加上--harmony即可
+在nodejs中可以使用大多数的ES6特性，只需要在启动应用的时候加上--harmony即可。
 ```shell
 node yourapp.js --harmony
 ```
+如果需要使用更多的ES6特性则需要使用转码器Babel，Tracuer等。[使用方法](http://es6.ruanyifeng.com/#docs/intro#Babel转码器)
 
 ES6特性的支持情况。[Click Here](http://kangax.github.io/es5-compat-table/es6/)
 
@@ -30,8 +31,23 @@ ES6特性的支持情况。[Click Here](http://kangax.github.io/es5-compat-table
 
 ###Block-Scoped Constructs Let and Const
 
-ES6中引入了块级作用域的概念
+由于在以前的标准中，JavaScript是有hoisting机制，JavaScript引擎在执行的时候，会把所有变量的声明都提升到**当前作用域**（即function是唯一拥有自身作用域的结构），这其实是一种很不友好的处理，所以ES6中引入了块级作用域的概念。
 
+```JavaScript
+var v = "hello";
+(function () {
+    console.log(v);
+    var v = "world";
+})();
+// 运行结果：undefined
+// 上面的代码等价于
+var v = "hello";
+(function () {
+    var v;
+    console.log(v);
+    v = "world";
+})();
+```
 let是一种新的变量声明方式，它允许你把变量作用域控制在块级里面。我们用大括号定义代码块，在ES5中，块级作用域起不了任何作用：
 
 ```JavaScript
@@ -41,21 +57,21 @@ function getLvl(flag) {
     if (flag === 0) {
         var memberLevel = 'silver';
     }
-    if (flag === 1) {
+    {
         var memberLevel = 'gold';
     }
-    if (flag === 2) {
+    {
         var memberLevel = 'diamond';
     }
     return memberLevel;
 }
-console.log(getLvl(2));// 'diamond'
+console.log(getLvl(0));// 'diamond'
 ```
-此处结果返回diamond，和预期一样，下面用let声明看下结果：
+此处结果返回diamond，和预期是不一样的，下面用let声明看下结果：
 ```JavaScript
 // Expression Code
 function getLvl(flag) {
-    var memberLevel = 'ordinary';
+    let memberLevel = 'ordinary';
     if (flag === 0) {
         let memberLevel = 'silver';
     }
