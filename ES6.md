@@ -121,7 +121,8 @@ console.log(i); // 5
 ```
 ###Destructuring Assignment（解构赋值）
 
-用途：
+细节比较多，直接上主要用途：
+
 1、交换变的值
 ```JavaScript
 [x,y] = [y,x];
@@ -151,7 +152,7 @@ let jsonData = {
 let { a, b, c: arr} = jsonData;
 console.log(a, b, arr);
 ```
-4、等等。。。。想了解更多。[Click Here](http://es6.ruanyifeng.com/#docs/destructuring)
+4、想了解[更多](http://es6.ruanyifeng.com/#docs/destructuring)。
 
 ###Multi-line Strings（多行字符串）
 
@@ -178,7 +179,7 @@ let str = `this is a trial sentence.this is a trial sentence.this is a trial sen
 
 ###Arrow Functions（箭头函数）
 
-直接上代码
+最直接的好处是简化了回调函数，直接上代码如下：
 ```JavaScript
 var f = v => v;
 ```
@@ -188,7 +189,7 @@ var f = function(v){
     return v;
 }
 ```
-可以配合默认参数，解构赋值一起使用，简化了回调函数的function关键字。
+可以配合默认参数，解构赋值一起使用，可以不用写function关键字。
 
 比较重要的一点，箭头函数this对象，就是定义时所在的对象。这个是很重要的一个信息，看看下面的例子：
 ```JavaScript
@@ -274,7 +275,7 @@ setTimeout(function (value) {
     })
 }, 1000, 'start');
 ```
-这样的代码基本不可阅读，不忍直视，现在使用Promise改写
+这样的代码对于其他要维护此段代码来说压力很大，很难读懂，现在使用Promise来改写它：
 ```JavaScript
 var promise = () => {
     return new Promise((resolve, reject) => {
@@ -333,9 +334,11 @@ Promise.then 和 Promise.catch 可以自己去看下官方解释，这里不深�
 
 ###Classes（类）
 
-现在javascript里面的保留字class终于有用处了，在原来的开发过程中，写一个类有很多种方法，这里不多讲[Click Here](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)，由于方法很多就造成了混乱。
+现在javascript里面的保留字class终于有用处了。
 
-用ES6则会相对简洁（虽然仍然是使用原型实现类）。下面看下代码，我们：
+在原来的开发过程中，需要面向对象开发时，我们总是要自己实现或者依赖第三方库实现继承，而且实现类的继承有很多种方法，这里不多讲[Click Here](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)，由于大量不同方法的存在就造成了混乱。
+
+用ES6则会相对简洁（仍然是使用原型实现类），下面看下代码，我们：
 ```JavaScript
 class BaseModel {
     constructor(options,data) {
@@ -378,7 +381,7 @@ console.log(business.dataCount);
 
 ###Enhanced Object Literals（增强的字面量对象）
 
-内容太多，建议看这里[Click Here](http://es6.ruanyifeng.com/#docs/object)
+内容太多，建议自己去看[这里](http://es6.ruanyifeng.com/#docs/object)
 
 ###Default Parameters（默认参数）
 
@@ -403,7 +406,7 @@ let painter = function (one = 'red', two = 'green', three = 'yellow') {
     }
 }
 ```
-更多看这里[Click Here](https://github.com/lukehoban/es6features#default--rest--spread)
+更多看[这里](https://github.com/lukehoban/es6features#default--rest--spread)
 
 ###Modules（模块）
 
