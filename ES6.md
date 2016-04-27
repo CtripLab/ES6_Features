@@ -1,12 +1,12 @@
 #ES6 New Features
 
-## Introduction
+##Introduction
 ECMAScript 6，又被称作ECMAScript 2015，是ECMAScript最新标准。
 
 所有的ES6特性。[Click Here](http://kangax.github.io/es5-compat-table/es6/)
 
 支持这些特性的javascript引擎。[Click Here](http://kangax.github.io/es5-compat-table/es6/)
-## Features
+##Features
 
 - Block-Scoped Constructs Let and Const（块级作用域）
 - Destructuring Assignment（解构赋值）
@@ -20,9 +20,9 @@ ECMAScript 6，又被称作ECMAScript 2015，是ECMAScript最新标准。
 - Template Literals （模板文本）
 - Generator
 
-## Details
+##Details
 
-### Block-Scoped Constructs Let and Const
+###Block-Scoped Constructs Let and Const
 
 ES6中引入了块级作用域的概念
 
@@ -97,7 +97,7 @@ for (var i = 0; i < s.length; i++){
 
 console.log(i); // 5
 ```
-### Destructuring Assignment（解构赋值）
+###Destructuring Assignment（解构赋值）
 
 用途：
 1、交换变的值
@@ -131,7 +131,7 @@ console.log(a, b, arr);
 ```
 4、等等。。。。想了解更多。[Click Here](http://es6.ruanyifeng.com/#docs/destructuring)
 
-### Multi-line Strings（多行字符串）
+###Multi-line Strings（多行字符串）
 
 这个功能很实用，如下所示：
 ```JavaScript
@@ -154,7 +154,7 @@ let str = `this is a trial sentence.this is a trial sentence.this is a trial sen
     this is a trial sentence.this is a trial sentence.this is a trial sentence.`;
 ```
 
-###　Arrow Functions（箭头函数）
+###Arrow Functions（箭头函数）
 
 直接上代码
 ```JavaScript
@@ -198,7 +198,7 @@ var handler = {
 }
 handler.upperCase()();// 'HELLO ES6'
 ```
-###　Promises
+###Promises
 Promise是异步变成的一种解决方案，比传统的解决方案-回调函数和时间更合理和更强大。
 
 Promise最早是由社区提出，ES6将其写进了语言标准，统一了用法，提供了原生的Promise对象。三种状态resolve, reject以及pending状态。
@@ -309,7 +309,7 @@ Promise.race  它同样接收一个数组，不同的是只要该数组中的 Pr
 
 Promise.then 和 Promise.catch 可以自己去看下官方解释，这里不深入。[Click Here](http://es6.ruanyifeng.com/#docs/promise)
 
-### Classes（类）
+###Classes（类）
 
 现在javascript里面的保留字class终于有用处了，在原来的开发过程中，写一个类有很多种方法，这里不多讲[Click Here](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)，由于方法很多就造成了混乱。
 
@@ -354,11 +354,11 @@ console.log(business.dataCount);
 ```
 关于更多Class的内容可以看这里[Click Here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes);
 
-### Enhanced Object Literals（增强的字面量对象）
+###Enhanced Object Literals（增强的字面量对象）
 
 内容太多，建议看这里[Click Here](http://es6.ruanyifeng.com/#docs/object)
 
-### Default Parameters（默认参数）
+###Default Parameters（默认参数）
 
 直接上例子
 ```JavaScript
@@ -383,7 +383,7 @@ let painter = function (one = 'red', two = 'green', three = 'yellow') {
 ```
 更多看这里[Click Here](https://github.com/lukehoban/es6features#default--rest--spread)
 
-### Modules（模块）
+###Modules（模块）
 
 原来在nodejs中我们是这样加载模块的：
 ```JavaScript
@@ -414,7 +414,7 @@ export function get(){
 ```
 更多请看这里[Click Here](http://exploringjs.com/es6/ch_modules.html)
 
-###　Template Literals （模板文本）
+###Template Literals （模板文本）
 这个就很容易理解了,ES6中优化了字符串的拼接：
 
 in ES5
@@ -427,7 +427,7 @@ var name = `Your name is ${first}  ${last}!`
 console.log(name);
 ```
 
-### Generator（生成器）
+###Generator（生成器）
 
 ####基本概念
 Generator Function
